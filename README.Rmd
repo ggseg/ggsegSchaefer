@@ -1,0 +1,103 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  fig.width = 6,
+  out.width = "100%"
+)
+devtools::load_all(".")
+```
+
+# ggsegSchaefer
+
+<!-- badges: start -->
+[![Travis build status](https://travis-ci.com/LCBC-UiO/ggsegSchaefer.svg?branch=master)](https://travis-ci.com/LCBC-UiO/ggsegSchaefer)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/LCBC-UiO/ggsegSchaefer?branch=master&svg=true)](https://ci.appveyor.com/project/LCBC-UiO/ggsegSchaefer)
+[![Codecov test coverage](https://codecov.io/gh/LCBC-UiO/ggsegSchaefer/branch/master/graph/badge.svg)](https://codecov.io/gh/LCBC-UiO/ggsegSchaefer?branch=master)
+<!-- badges: end -->
+
+This package contains dataset for plotting the Shaefer cortical atlas ggseg and ggseg3d. 
+
+## Installation
+
+You can install the released version of ggsegSchaefer from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("LCBC-UiO/ggsegSchaefer")
+```
+
+## Example
+
+```{r}
+library(ggsegSchaefer)
+```
+
+<!-- ```{r, fig.height=10} -->
+<!-- library(ggseg) -->
+
+<!-- ggseg(atlas = schaefer, mapping = aes(fill = region)) + -->
+<!--   scale_fill_brain("schaefer", package = "ggsegShaefer") + -->
+<!--   theme(legend.position = "bottom", -->
+<!--         legend.text = element_text(size = 7)) + -->
+<!--   guides(fill = guide_legend(ncol = 2)) -->
+
+<!-- ``` -->
+
+```{r "noneval", eval=FALSE}
+library(ggseg3d)
+
+ggseg3d(atlas = schaefer7_3d) %>% 
+  pan_camera("right lateral")
+```
+
+```{r "orca", include=FALSE}
+library(ggseg3d)
+
+p <- ggseg3d(atlas = schaefer7_3d) %>%
+  pan_camera("right lateral") %>%
+  plotly::add_annotations( text="Screen capture",
+                  legendtitle=TRUE, showarrow=FALSE,
+                  font = list(color = "#000000b4",
+                              family = 'sans serif',
+                              size = 50))
+plotly::orca(p, "man/figures/README-s7-3d-plot.png")
+```
+
+```{r "incl", echo=FALSE}
+knitr::include_graphics("man/figures/README-s7-3d-plot.png")
+```
+
+
+```{r "noneval1", eval=FALSE}
+library(ggseg3d)
+
+ggseg3d(atlas = schaefer17_3d) %>% 
+  pan_camera("right lateral")
+```
+
+```{r "orca1", include=FALSE}
+p <- ggseg3d(atlas = schaefer17_3d) %>%
+  pan_camera("right lateral") %>%
+  plotly::add_annotations( text="Screen capture",
+                  legendtitle=TRUE, showarrow=FALSE,
+                  font = list(color = "#000000b4",
+                              family = 'sans serif',
+                              size = 50))
+plotly::orca(p, "man/figures/README-s17-3d-plot.png")
+```
+
+```{r "incl1", echo=FALSE}
+knitr::include_graphics("man/figures/README-s17-3d-plot.png")
+```
+
+Please note that the 'ggsegSchaefer' project is released with a
+[Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+By contributing to this project, you agree to abide by its terms.

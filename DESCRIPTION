@@ -20,6 +20,7 @@ Suggests:
     ggseg,
     ggseg3d,
     ggplot2,
+    tidyr,
     knitr,
     rmarkdown,
     covr,
