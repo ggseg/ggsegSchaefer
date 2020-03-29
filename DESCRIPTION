@@ -22,6 +22,7 @@ Suggests:
     ggplot2,
     tidyr,
     knitr,
+    usethis,
     rmarkdown,
     covr,
     testthat (>= 2.1.0),
