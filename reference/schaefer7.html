@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • ggsegSchaefer</title>
+<title>Local-Global 7 Parcellation of the Human Cerebral Cortex — schaefer7 • ggsegSchaefer</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,9 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Local-Global 7 Parcellation of the Human Cerebral Cortex — schaefer7" />
+<meta property="og:description" content="Coordinate data for the Desikan-Killany Cortical atlas,
+with 40 regions in on the cortical surface of the brain." />
 
 
 
@@ -58,7 +60,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -105,60 +107,48 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Local-Global 7 Parcellation of the Human Cerebral Cortex</h1>
+    <small class="dont-index">Source: <a href='https://github.com/LCBC-UiO/ggsegSchaefer/blob/master/R/schaefer.R'><code>R/schaefer.R</code></a></small>
+    <div class="hidden name"><code>schaefer7.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Coordinate data for the Desikan-Killany Cortical atlas,
+with 40 regions in on the cortical surface of the brain.</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>schaefer7</span>)</pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="schaefer17.html">schaefer17</a></code> </p>
-        </td>
-        <td><p>Local-Global 17 Parcellation of the Human Cerebral Cortex</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="schaefer17_3d.html">schaefer17_3d</a></code> </p>
-        </td>
-        <td><p>Local-Global 17 Parcellation of the Human Cerebral Cortex</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="schaefer7.html">schaefer7</a></code> </p>
-        </td>
-        <td><p>Local-Global 7 Parcellation of the Human Cerebral Cortex</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="schaefer7_3d.html">schaefer7_3d</a></code> </p>
-        </td>
-        <td><p>Local-Global 7 Parcellation of the Human Cerebral Cortex</p></td>
-      </tr>
-    </tbody>
-    </table>
+
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>A data.frame with 10913 observations and 11 variables</p><dl'>
+  <dt>long</dt><dd><p>coordinates for the x-axis</p></dd>
+  <dt>lat</dt><dd><p>coordinates for the y-axis</p></dd>
+  <dt>region</dt><dd><p>name of region</p></dd>
+  <dt>hemi</dt><dd><p>name of the hemisphere (left, right)</p></dd>
+  <dt>side</dt><dd><p>which side to view (medial, lateral)</p></dd>
+  <dt>acronym</dt><dd><p>abbreviated name of region</p></dd>
+  <dt>lobe</dt><dd><p>lobe location</p></dd>
+  <dt>label</dt><dd><p>label from recon-all segmentation</p></dd>
+  <dt>atlas</dt><dd><p>name of the atlas</p></dd>
+
+</dl>
+
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Schaefer et al. (2018) Cereb Cortex. 2018 Sep 1;28(9):3095-3114. doi: 10.1093/cercor/bhx179
+(<a href='https://www.ncbi.nlm.nih.gov/pubmed/28981612'>PubMed</a>)</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Other ggseg_atlases: 
+<code><a href='schaefer17.html'>schaefer17</a></code></p></div>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>schaefer7</span>)</div></pre>
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
