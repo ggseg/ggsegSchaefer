@@ -32,21 +32,28 @@ remotes::install_github("LCBC-UiO/ggsegSchaefer")
 library(ggsegSchaefer)
 ```
 
-<!-- ```{r, fig.height=10} -->
+``` r
+library(ggseg)
 
-<!-- library(ggseg) -->
+ggseg(atlas = schaefer7, mapping = aes(fill = region)) +
+  scale_fill_brain("schaefer7", package = "ggsegSchaefer") +
+  theme(legend.position = "bottom",
+        legend.text = element_text(size = 7)) +
+  guides(fill = guide_legend(ncol = 4))
+```
 
-<!-- ggseg(atlas = schaefer, mapping = aes(fill = region)) + -->
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
 
-<!--   scale_fill_brain("schaefer", package = "ggsegShaefer") + -->
+``` r
 
-<!--   theme(legend.position = "bottom", -->
+ggseg(atlas = schaefer17, mapping = aes(fill = region)) +
+  scale_fill_brain("schaefer17", package = "ggsegSchaefer") +
+  theme(legend.position = "bottom",
+        legend.text = element_text(size = 7)) +
+  guides(fill = guide_legend(ncol = 4))
+```
 
-<!--         legend.text = element_text(size = 7)) + -->
-
-<!--   guides(fill = guide_legend(ncol = 2)) -->
-
-<!-- ``` -->
+<img src="man/figures/README-unnamed-chunk-3-2.png" width="100%" />
 
 ``` r
 library(ggseg3d)

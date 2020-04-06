@@ -40,16 +40,22 @@ remotes::install_github("LCBC-UiO/ggsegSchaefer")
 library(ggsegSchaefer)
 ```
 
-<!-- ```{r, fig.height=10} -->
-<!-- library(ggseg) -->
+```{r, fig.height=10}
+library(ggseg)
 
-<!-- ggseg(atlas = schaefer, mapping = aes(fill = region)) + -->
-<!--   scale_fill_brain("schaefer", package = "ggsegShaefer") + -->
-<!--   theme(legend.position = "bottom", -->
-<!--         legend.text = element_text(size = 7)) + -->
-<!--   guides(fill = guide_legend(ncol = 2)) -->
+ggseg(atlas = schaefer7, mapping = aes(fill = region)) +
+  scale_fill_brain("schaefer7", package = "ggsegSchaefer") +
+  theme(legend.position = "bottom",
+        legend.text = element_text(size = 7)) +
+  guides(fill = guide_legend(ncol = 4))
 
-<!-- ``` -->
+ggseg(atlas = schaefer17, mapping = aes(fill = region)) +
+  scale_fill_brain("schaefer17", package = "ggsegSchaefer") +
+  theme(legend.position = "bottom",
+        legend.text = element_text(size = 7)) +
+  guides(fill = guide_legend(ncol = 4))
+
+```
 
 ```{r "noneval", eval=FALSE}
 library(ggseg3d)
