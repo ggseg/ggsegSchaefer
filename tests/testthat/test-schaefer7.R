@@ -1,46 +1,43 @@
 # ggseg ----
-# context("test-schaefer7-adapt_scales")
-# test_that("Check that ggseg:::adapt_scales is working", {
-#   expect_equal(mode(ggseg:::adapt_scales(unnest(schaefer, ggseg))), "list")
-# })
+context("test-schaefer7-adapt_scales")
+test_that("Check that ggseg:::adapt_scales is working", {
+  expect_equal(mode(ggseg:::adapt_scales(unnest(schaefer7, ggseg))), "list")
+})
 
 context("test-schaefer7-palettes")
 test_that("check new palettes work", {
-  expect_equal(length(brain_pal("schaefer7", package = "ggsegSchaefer")), 200)
+  expect_equal(length(brain_pal("schaefer7", package = "ggsegSchaefer")), 399)
 
   expect_error(brain_pal("schaefer7"), "not a valid")
 
-  # expect_true(all(names(brain_pal("schaefer", package = "ggsegSchaefer")) %in% schaefer$region))
+  expect_true(all(names(brain_pal("schaefer7", package = "ggsegSchaefer")) %in% schaefer7$region))
 })
 
-# context("test-schaefer7-ggseg-atlas")
-# test_that("atlases are true ggseg atlases", {
-#
-#   expect_true(is_ggseg_atlas(schaefer))
-#
-# })
+context("test-schaefer7-ggseg-atlas")
+test_that("atlases are true ggseg atlases", {
 
-# context("test-schaefer7-ggseg")
-# test_that("Check that polygon atlases are working", {
-#   expect_is(ggseg(atlas = schaefer),c("gg","ggplot"))
-#
-#   expect_is(ggseg(atlas = schaefer, mapping = aes(fill = region)),
-#             c("gg","ggplot"))
-#
-#   expect_is(ggseg(atlas = schaefer, mapping = aes(fill = region)) +
-#               scale_fill_brain("schaefer", package = "ggsegSchaefer"),
-#             c("gg","ggplot"))
-#
-#   expect_is(ggseg(atlas = schaefer, mapping = aes(fill = region)) +
-#               scale_fill_brain("schaefer", package = "ggsegSchaefer"),
-#             c("gg","ggplot"))
-#
-#   expect_warning(ggseg(atlas = schaefer, mapping=aes(fill=area),
-#                   position="stacked"), "Cannot stack")
-#
-#   expect_is(ggseg(atlas = schaefer, mapping=aes(fill=area), adapt_scales = F ),c("gg","ggplot"))
-#
-# })
+  expect_true(is_ggseg_atlas(schaefer7))
+
+})
+
+context("test-schaefer7-ggseg")
+test_that("Check that polygon atlases are working", {
+  expect_is(ggseg(atlas = schaefer7),c("gg","ggplot"))
+
+  expect_is(ggseg(atlas = schaefer7, mapping = aes(fill = region)),
+            c("gg","ggplot"))
+
+  expect_is(ggseg(atlas = schaefer7, mapping = aes(fill = region)) +
+              scale_fill_brain("schaefer7", package = "ggsegSchaefer"),
+            c("gg","ggplot"))
+
+  expect_is(ggseg(atlas = schaefer7, mapping = aes(fill = region)) +
+              scale_fill_brain("schaefer7", package = "ggsegSchaefer"),
+            c("gg","ggplot"))
+
+  expect_is(ggseg(atlas = schaefer7, mapping=aes(fill=area), adapt_scales = F ),c("gg","ggplot"))
+
+})
 
 
 # ggseg3d ----
