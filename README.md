@@ -35,8 +35,7 @@ library(ggsegSchaefer)
 ``` r
 library(ggseg)
 
-ggseg(atlas = schaefer7, mapping = aes(fill = region)) +
-  scale_fill_brain("schaefer7", package = "ggsegSchaefer") +
+plot(schaefer7) +
   theme(legend.position = "bottom",
         legend.text = element_text(size = 7)) +
   guides(fill = guide_legend(ncol = 4))
@@ -46,8 +45,7 @@ ggseg(atlas = schaefer7, mapping = aes(fill = region)) +
 
 ``` r
 
-ggseg(atlas = schaefer17, mapping = aes(fill = region)) +
-  scale_fill_brain("schaefer17", package = "ggsegSchaefer") +
+plot(schaefer17) +
   theme(legend.position = "bottom",
         legend.text = element_text(size = 7)) +
   guides(fill = guide_legend(ncol = 4))

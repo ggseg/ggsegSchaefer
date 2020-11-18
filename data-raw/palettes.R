@@ -2,7 +2,6 @@ devtools::load_all("../../ggsegExtra/")
 devtools::load_all("../../ggseg/")
 devtools::load_all(".")
 
-
 schaefer7_3d <- unnest(schaefer7_3d, ggseg_3d)
 schaefer7_3d <- mutate(schaefer7_3d,
                        region = ifelse(grepl("wall|NA", region),
@@ -20,6 +19,8 @@ schaefer17_3d <- mutate(schaefer17_3d,
 )
 schaefer17_3d <- as_ggseg3d_atlas(schaefer17_3d)
 
+
+
 # Make palette ----
 schaefer7_pal <- make_palette_ggseg(schaefer7_3d)
 schaefer17_pal <- make_palette_ggseg(schaefer17_3d)
@@ -35,11 +36,10 @@ schaefer7 <- ggsegExtra::make_ggseg3d_2_ggseg(schaefer7_3d,
                                                tolerance = .1,
                                                output_dir = "~/Desktop/test/")
 
+schaefer7 <- as_brain_atlas(schaefer7)
+schaefer7$palette <- brain_pals$schaefer7
 
-schaefer7$geometry <- NULL
-
-schaefer7 <- as_ggseg_atlas(schaefer7)
-
+plot(schaefer7)
 ggseg(atlas=schaefer7, show.legend = FALSE,
       colour = "black", position="stacked",
       alpha=.6,
@@ -57,9 +57,10 @@ schaefer17 <- ggsegExtra::make_ggseg3d_2_ggseg(schaefer17_3d,
                                               tolerance = .1,
                                               output_dir = "~/Desktop/test/")
 
-schaefer17$geometry <- NULL
-schaefer17 <- as_ggseg_atlas(schaefer17)
+schaefer17 <- as_brain_atlas(schaefer17)
+schaefer17$palette <- brain_pals$schaefer17
 
+plot(schaefer17)
 ggseg(atlas=schaefer17, show.legend = FALSE,
       colour = "black", position="stacked",
       alpha=.6,

@@ -1,22 +1,17 @@
 # ggseg ----
-context("test-schaefer17-adapt_scales")
-test_that("Check that ggseg:::adapt_scales is working", {
-  expect_equal(mode(ggseg:::adapt_scales(unnest(schaefer17, ggseg))), "list")
-})
-
 context("test-schaefer17-palettes")
 test_that("check new palettes work", {
   expect_equal(length(brain_pal("schaefer17", package = "ggsegSchaefer")), 399)
 
   expect_error(brain_pal("schaefer17"), "not a valid")
 
-  expect_true(all(names(brain_pal("schaefer17", package = "ggsegSchaefer")) %in% schaefer17$region))
+  expect_true(all(names(brain_pal("schaefer17", package = "ggsegSchaefer")) %in% brain_regions(schaefer17)))
 })
 
 context("test-schaefer17-ggseg-atlas")
 test_that("atlases are true ggseg atlases", {
 
-  expect_true(is_ggseg_atlas(schaefer17))
+  expect_true(is_brain_atlas(schaefer17))
 
 })
 
@@ -35,7 +30,7 @@ test_that("Check that polygon atlases are working", {
               scale_fill_brain("schaefer17", package = "ggsegSchaefer"),
             c("gg","ggplot"))
 
-  expect_is(ggseg(atlas = schaefer17, mapping=aes(fill=area), adapt_scales = F ),c("gg","ggplot"))
+  expect_is(ggseg(atlas = schaefer17, mapping=aes(fill=region), adapt_scales = F ),c("gg","ggplot"))
 
 })
 
