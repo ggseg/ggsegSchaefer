@@ -11,6 +11,8 @@ status](https://travis-ci.com/LCBC-UiO/ggsegSchaefer.svg?branch=master)](https:/
 status](https://ci.appveyor.com/api/projects/status/github/LCBC-UiO/ggsegSchaefer?branch=master&svg=true)](https://ci.appveyor.com/project/LCBC-UiO/ggsegSchaefer)
 [![Codecov test
 coverage](https://codecov.io/gh/LCBC-UiO/ggsegSchaefer/branch/master/graph/badge.svg)](https://codecov.io/gh/LCBC-UiO/ggsegSchaefer?branch=master)
+[![R build
+status](https://github.com/LCBC-UiO/ggsegSchaefer/workflows/R-CMD-check/badge.svg)](https://github.com/LCBC-UiO/ggsegSchaefer/actions)
 <!-- badges: end -->
 
 This package contains dataset for plotting the Shaefer cortical atlas
