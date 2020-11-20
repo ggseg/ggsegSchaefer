@@ -13,7 +13,6 @@ knitr::opts_chunk$set(
   out.width = "100%",
   fig.retina = 3
 )
-devtools::load_all(".")
 ```
 
 # ggsegSchaefer
@@ -59,6 +58,7 @@ plot(schaefer17) +
 
 ```{r "noneval", eval=FALSE}
 library(ggseg3d)
+library(dplyr)
 
 ggseg3d(atlas = schaefer7_3d) %>% 
   pan_camera("right lateral")
@@ -66,6 +66,7 @@ ggseg3d(atlas = schaefer7_3d) %>%
 
 ```{r "orca", include=FALSE}
 library(ggseg3d)
+library(dplyr)
 
 p <- ggseg3d(atlas = schaefer7_3d) %>%
   pan_camera("right lateral") %>%

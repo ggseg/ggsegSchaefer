@@ -36,6 +36,7 @@ library(ggsegSchaefer)
 
 ``` r
 library(ggseg)
+#> Loading required package: ggplot2
 
 plot(schaefer7) +
   theme(legend.position = "bottom",
@@ -57,6 +58,7 @@ plot(schaefer17) +
 
 ``` r
 library(ggseg3d)
+library(dplyr)
 
 ggseg3d(atlas = schaefer7_3d) %>% 
   pan_camera("right lateral")

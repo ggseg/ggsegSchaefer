@@ -63,6 +63,8 @@ jobs:
           do
             eval sudo $cmd
           done < <(Rscript -e 'writeLines(remotes::system_requirements("ubuntu", "20.04"))')
+          sudo apt-get install libudunits2-dev
+          sudo apt-get install libgdal-dev
 
       - name: Install dependencies
         run: |
