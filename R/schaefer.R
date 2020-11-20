@@ -1,9 +1,7 @@
 
 ## Polygon data ----
-#' Local-Global 7 Parcellation of the Human Cerebral Cortex
+#' Schaefer 7 network parcellation
 #'
-#' Coordinate data for the Desikan-Killany Cortical atlas,
-#' with 40 regions in on the cortical surface of the brain.
 #'
 #' @docType data
 #' @name schaefer7
@@ -31,10 +29,7 @@
 "schaefer7"
 
 
-#' Local-Global 17 Parcellation of the Human Cerebral Cortex
-#'
-#' Coordinate data for the Desikan-Killany Cortical atlas,
-#' with 40 regions in on the cortical surface of the brain.
+#' Schaefer 7 network parcellation
 #'
 #' @docType data
 #' @name schaefer17
@@ -62,7 +57,7 @@
 
 ### 3d meshes ----
 
-#' Local-Global 7 Parcellation of the Human Cerebral Cortex
+#' Schaefer 7 network parcellation
 #'
 #' Mesh data for the 7 resting-state networks of
 #' the Schaefer et al. (2018) networks.
@@ -98,7 +93,7 @@
 
 
 
-#' Local-Global 17 Parcellation of the Human Cerebral Cortex
+#' Schaefer 17 network parcellation
 #'
 #' Mesh data for the 17 resting-state networks of
 #' the Schaefer et al. (2018) networks.

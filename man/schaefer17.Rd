@@ -3,7 +3,7 @@
 \docType{data}
 \name{schaefer17}
 \alias{schaefer17}
-\title{Local-Global 17 Parcellation of the Human Cerebral Cortex}
+\title{Schaefer 7 network parcellation}
 \format{
 A data.frame with 10913 observations and 11 variables
 \describe{
@@ -20,8 +20,7 @@ A data.frame with 10913 observations and 11 variables
 data(schaefer17)
 }
 \description{
-Coordinate data for the Desikan-Killany Cortical atlas,
-with 40 regions in on the cortical surface of the brain.
+Schaefer 7 network parcellation
 }
 \examples{
 data(schaefer17)
@@ -32,6 +31,8 @@ Schaefer et al. (2018) Cereb Cortex. 2018 Sep 1;28(9):3095-3114. doi: 10.1093/ce
 }
 \seealso{
 Other ggseg_atlases: 
+\code{\link{schaefer17_200}},
+\code{\link{schaefer17_400}},
 \code{\link{schaefer7}}
 }
 \concept{ggseg_atlases}

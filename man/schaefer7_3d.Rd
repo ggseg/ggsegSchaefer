@@ -3,7 +3,7 @@
 \docType{data}
 \name{schaefer7_3d}
 \alias{schaefer7_3d}
-\title{Local-Global 7 Parcellation of the Human Cerebral Cortex}
+\title{Schaefer 7 network parcellation}
 \format{
 A tibble with 4 observations and a nested data.frame
 \describe{

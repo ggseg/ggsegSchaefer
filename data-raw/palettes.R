@@ -32,11 +32,9 @@ devtools::load_all(".")
 # make atlas ----
 
 schaefer7 <- ggsegExtra::make_ggseg3d_2_ggseg(schaefer7_3d,
-                                               steps = 6:7,
+                                               steps = 1:7,
                                                tolerance = .1,
-                                               output_dir = "~/Desktop/test/")
-
-schaefer7 <- as_brain_atlas(schaefer7)
+                                               output_dir = "data-raw/")
 schaefer7$palette <- brain_pals$schaefer7
 
 plot(schaefer7)
@@ -55,7 +53,7 @@ usethis::use_data(schaefer7,
 schaefer17 <- ggsegExtra::make_ggseg3d_2_ggseg(schaefer17_3d,
                                               steps = 6:7,
                                               tolerance = .1,
-                                              output_dir = "~/Desktop/test/")
+                                              output_dir = "data-raw/")
 
 schaefer17 <- as_brain_atlas(schaefer17)
 schaefer17$palette <- brain_pals$schaefer17

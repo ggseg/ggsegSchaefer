@@ -1,5 +1,4 @@
 # ggseg ----
-context("test-schaefer7-palettes")
 test_that("check new palettes work", {
   expect_equal(length(brain_pal("schaefer7", package = "ggsegSchaefer")), 399)
 
@@ -8,14 +7,12 @@ test_that("check new palettes work", {
   expect_true(all(names(brain_pal("schaefer7", package = "ggsegSchaefer")) %in% brain_regions(schaefer7)))
 })
 
-context("test-schaefer7-ggseg-atlas")
 test_that("atlases are true ggseg atlases", {
 
   expect_true(is_brain_atlas(schaefer7))
 
 })
 
-context("test-schaefer7-ggseg")
 test_that("Check that polygon atlases are working", {
   expect_is(ggseg(atlas = schaefer7),c("gg","ggplot"))
 
@@ -36,7 +33,6 @@ test_that("Check that polygon atlases are working", {
 
 
 # ggseg3d ----
-context("test-schaefer7-ggseg3d")
 test_that("Check that mesh atlases are working", {
   expect_is(
     ggseg3d(atlas=schaefer7_3d),
@@ -46,7 +42,6 @@ test_that("Check that mesh atlases are working", {
 
 
 
-context("test-schaefer7-ggseg3d-atlas")
 test_that("atlases are true ggseg3d atlases", {
 
   expect_true(is_ggseg3d_atlas(schaefer7_3d))
