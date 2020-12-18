@@ -3,7 +3,17 @@
 \docType{data}
 \name{schaefer7_3d}
 \alias{schaefer7_3d}
-\title{Local-Global 7 Parcellation of the Human Cerebral Cortex}
+\alias{schaefer7_400_3d}
+\alias{schaefer7_100_3d}
+\alias{schaefer7_200_3d}
+\alias{schaefer7_300_3d}
+\alias{schaefer7_500_3d}
+\alias{schaefer7_600_3d}
+\alias{schaefer7_700_3d}
+\alias{schaefer7_800_3d}
+\alias{schaefer7_900_3d}
+\alias{schaefer7_1000_3d}
+\title{Local-Global 7-Network Parcellation of the Human Cerebral Cortex}
 \format{
 A tibble with 4 observations and a nested data.frame
 \describe{
@@ -20,16 +30,52 @@ A tibble with 4 observations and a nested data.frame
   \item{area}{name of area in full}
   \item{colour}{HEX colour of region}
 }
+
+An object of class \code{ggseg3d_atlas} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 2 rows and 4 columns.
+
+An object of class \code{ggseg3d_atlas} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 2 rows and 4 columns.
+
+An object of class \code{ggseg3d_atlas} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 2 rows and 4 columns.
+
+An object of class \code{ggseg3d_atlas} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 2 rows and 4 columns.
+
+An object of class \code{ggseg3d_atlas} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 2 rows and 4 columns.
+
+An object of class \code{ggseg3d_atlas} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 2 rows and 4 columns.
+
+An object of class \code{ggseg3d_atlas} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 2 rows and 4 columns.
+
+An object of class \code{ggseg3d_atlas} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 2 rows and 4 columns.
+
+An object of class \code{ggseg3d_atlas} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 2 rows and 4 columns.
 }
 \usage{
-data(schaefer7_3d)
+data(schaefer7_400_3d)
+
+schaefer7_100_3d
+
+schaefer7_200_3d
+
+schaefer7_300_3d
+
+schaefer7_500_3d
+
+schaefer7_600_3d
+
+schaefer7_700_3d
+
+schaefer7_800_3d
+
+schaefer7_900_3d
+
+schaefer7_1000_3d
 }
 \description{
 Mesh data for the 7 resting-state networks of
 the Schaefer et al. (2018) networks.
 }
 \examples{
-data(schaefer7_3d)
+data(schaefer7_400_3d)
 }
 \references{
 Schaefer et al. (2018) Cereb Cortex. 2018 Sep 1;28(9):3095-3114. doi: 10.1093/cercor/bhx179

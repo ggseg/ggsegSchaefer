@@ -3,28 +3,34 @@
 \docType{data}
 \name{schaefer17}
 \alias{schaefer17}
-\title{Local-Global 17 Parcellation of the Human Cerebral Cortex}
+\alias{schaefer17_100}
+\alias{schaefer17_200}
+\title{Local-Global 17-Network Parcellation of the Human Cerebral Cortex}
 \format{
-A data.frame with 10913 observations and 11 variables
+A data.frame with 1 observation per ROI and 6 variables
 \describe{
-  \item{long}{coordinates for the x-axis}
-  \item{lat}{coordinates for the y-axis}
-  \item{region}{name of region}
   \item{hemi}{name of the hemisphere (left, right)}
   \item{side}{which side to view (medial, lateral)}
+  \item{region}{name of region}
   \item{label}{label from recon-all segmentation}
-  \item{atlas}{name of the atlas}
+  \item{roi}{ROI number in the original atlas lookup table}
+  \item{geometry}{\code{MULTIPOLYGON} of vertices for that region}
 }
+
+An object of class \code{brain_atlas} of length 4.
 }
 \usage{
 data(schaefer17)
+
+schaefer17_200
 }
 \description{
-Coordinate data for the Desikan-Killany Cortical atlas,
-with 40 regions in on the cortical surface of the brain.
+Coordinate data for the Schaefer et al. (2018) cortical atlas,
+with 100-1000 regions on the cortical surface of the brain, aligned with
+17 previously described functional networks (Yeo et al., 2011).
 }
 \examples{
-data(schaefer17)
+data(schaefer17_100)
 }
 \references{
 Schaefer et al. (2018) Cereb Cortex. 2018 Sep 1;28(9):3095-3114. doi: 10.1093/cercor/bhx179
