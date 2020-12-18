@@ -8,3 +8,4 @@ renv/*
 .Rprofile
 python/*
 !python/environment.yml
+data-raw/temp/*
