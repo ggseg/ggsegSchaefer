@@ -1,6 +1,6 @@
 Package: ggsegSchaefer
 Title: Schaefer datasets for the ggseg-plotting tool
-Version: 1.0
+Version: 2.0
 Authors@R: c(person("Athanasia Mo", "Mowinckel", 
                     email = "a.m.mowinckel@psykologi.uio.no", 
                     role = c("aut", "cre"),
@@ -8,25 +8,34 @@ Authors@R: c(person("Athanasia Mo", "Mowinckel",
             person("Didac", "Vidal-Piñeiro", 
                     email = "d.v.pineiro@psykologi.uio.no", 
                     role = c("aut"),
-                    comment = c(ORCID = "0000-0001-9997-9156")))
+                    comment = c(ORCID = "0000-0001-9997-9156")),
+            person("Monica", "Thieu", 
+                    email = "monica.thieu@columbia.edu", 
+                    role = c("ctb"),
+                    comment = c(ORCID = "0000-0002-6376-0467")))
 Description: This is a support package for the ggseg, and ggseg3d packages.
     It contains the Schaefer atlases to plot using functions from those two packages.
 License: MIT + file LICENSE
 Encoding: UTF-8
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 Depends: R (>= 2.10)
 LazyData: true
 Suggests:
     ggseg,
     ggseg3d,
+    ggsegExtra,
+    tidyverse,
     ggplot2,
-    tidyr,
     knitr,
     usethis,
     rmarkdown,
     covr,
     testthat (>= 2.1.0),
-    devtools
+    devtools,
+    renv,
+    reticulate,
+    freesurfer,
+    roxygen2
 VignetteBuilder: knitr
 Remotes: 
     LCBC-UiO/ggseg,
