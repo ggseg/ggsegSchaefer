@@ -9,3 +9,4 @@ renv/*
 python/*
 !python/environment.yml
 data-raw/temp/*
+data-raw/fsaverage5/*
