@@ -33,24 +33,25 @@ library(ggsegSchaefer)
 ```
 
 ``` r
+library(ggplot2)
 library(ggseg)
 
-ggseg(atlas = schaefer7, mapping = aes(fill = region)) +
-  scale_fill_brain("schaefer7", package = "ggsegSchaefer") +
-  theme(legend.position = "bottom",
-        legend.text = element_text(size = 7)) +
-  guides(fill = guide_legend(ncol = 4))
+ggplot() +
+  geom_brain(atlas = schaefer7_400,
+             position = position_brain(hemi ~ side)) + 
+  scale_fill_brain("schaefer7_400", package = "ggsegSchaefer") +
+  guides(fill = FALSE)
 ```
 
 <img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
 
 ``` r
 
-ggseg(atlas = schaefer17, mapping = aes(fill = region)) +
-  scale_fill_brain("schaefer17", package = "ggsegSchaefer") +
-  theme(legend.position = "bottom",
-        legend.text = element_text(size = 7)) +
-  guides(fill = guide_legend(ncol = 4))
+ggplot() +
+  geom_brain(atlas = schaefer17_100,
+             position = position_brain(hemi ~ side)) + 
+  scale_fill_brain("schaefer17_100", package = "ggsegSchaefer") +
+  guides(fill = FALSE)
 ```
 
 <img src="man/figures/README-unnamed-chunk-3-2.png" width="100%" />
@@ -58,7 +59,7 @@ ggseg(atlas = schaefer17, mapping = aes(fill = region)) +
 ``` r
 library(ggseg3d)
 
-ggseg3d(atlas = schaefer7_3d) %>% 
+ggseg3d(atlas = schaefer7_400_3d, surface = "inflated") %>% 
   pan_camera("right lateral")
 ```
 
@@ -67,7 +68,7 @@ ggseg3d(atlas = schaefer7_3d) %>%
 ``` r
 library(ggseg3d)
 
-ggseg3d(atlas = schaefer17_3d) %>% 
+ggseg3d(atlas = schaefer17_100_3d, surface = "inflated") %>% 
   pan_camera("right lateral")
 ```
 
