@@ -5,17 +5,21 @@
 \alias{schaefer17}
 \alias{schaefer17_100}
 \alias{schaefer17_200}
+\alias{schaefer17_400}
+\alias{schaefer17_500}
+\alias{schaefer17_600}
+\alias{schaefer17_700}
 \title{Local-Global 17-Network Parcellation of the Human Cerebral Cortex}
 \format{
-A data.frame with 1 observation per ROI and 6 variables
-\describe{
-  \item{hemi}{name of the hemisphere (left, right)}
-  \item{side}{which side to view (medial, lateral)}
-  \item{region}{name of region}
-  \item{label}{label from recon-all segmentation}
-  \item{roi}{ROI number in the original atlas lookup table}
-  \item{geometry}{\code{MULTIPOLYGON} of vertices for that region}
-}
+An object of class \code{brain_atlas} of length 4.
+
+An object of class \code{brain_atlas} of length 4.
+
+An object of class \code{brain_atlas} of length 4.
+
+An object of class \code{brain_atlas} of length 4.
+
+An object of class \code{brain_atlas} of length 4.
 
 An object of class \code{brain_atlas} of length 4.
 }
@@ -23,14 +27,37 @@ An object of class \code{brain_atlas} of length 4.
 data(schaefer17)
 
 schaefer17_200
+
+schaefer17_400
+
+schaefer17_500
+
+schaefer17_600
+
+schaefer17_700
 }
 \description{
 Coordinate data for the Schaefer et al. (2018) cortical atlas,
 with 100-1000 regions on the cortical surface of the brain, aligned with
 17 previously described functional networks (Yeo et al., 2011).
 }
+\details{
+\itemize{
+ \item{schaefer17_100}{ 100 parellation of the 17 networks}
+ \item{schaefer17_200}{ 200 parellation of the 17 networks}
+ \item{schaefer17_400}{ 400 parellation of the 17 networks}
+ \item{schaefer17_500}{ 500 parellation of the 17 networks}
+ \item{schaefer17_600}{ 600 parellation of the 17 networks}
+ \item{schaefer17_700}{ 700 parellation of the 17 networks}
+}
+}
 \examples{
 data(schaefer17_100)
+data(schaefer17_200)
+data(schaefer17_400)
+data(schaefer17_500)
+data(schaefer17_600)
+data(schaefer17_700)
 }
 \references{
 Schaefer et al. (2018) Cereb Cortex. 2018 Sep 1;28(9):3095-3114. doi: 10.1093/cercor/bhx179

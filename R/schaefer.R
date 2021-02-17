@@ -24,6 +24,10 @@
 #'   \item{roi}{ROI number in the original atlas lookup table}
 #'   \item{geometry}{\code{MULTIPOLYGON} of vertices for that region}
 #' }
+#'
+#' @import ggseg
+#' @import ggseg3d
+#'
 #' @examples
 #' data(schaefer7_100)
 "schaefer7_100"
@@ -40,6 +44,15 @@
 #' with 100-1000 regions on the cortical surface of the brain, aligned with
 #' 17 previously described functional networks (Yeo et al., 2011).
 #'
+#' \itemize{
+#'  \item{schaefer17_100}{ 100 parellation of the 17 networks}
+#'  \item{schaefer17_200}{ 200 parellation of the 17 networks}
+#'  \item{schaefer17_400}{ 400 parellation of the 17 networks}
+#'  \item{schaefer17_500}{ 500 parellation of the 17 networks}
+#'  \item{schaefer17_600}{ 600 parellation of the 17 networks}
+#'  \item{schaefer17_700}{ 700 parellation of the 17 networks}
+#' }
+#'
 #' @docType data
 #' @name schaefer17
 #' @usage data(schaefer17)
@@ -49,21 +62,30 @@
 #' @references Schaefer et al. (2018) Cereb Cortex. 2018 Sep 1;28(9):3095-3114. doi: 10.1093/cercor/bhx179
 #' (\href{https://www.ncbi.nlm.nih.gov/pubmed/28981612}{PubMed})
 #'
-#' @format A data.frame with 1 observation per ROI and 6 variables
-#' \describe{
-#'   \item{hemi}{name of the hemisphere (left, right)}
-#'   \item{side}{which side to view (medial, lateral)}
-#'   \item{region}{name of region}
-#'   \item{label}{label from recon-all segmentation}
-#'   \item{roi}{ROI number in the original atlas lookup table}
-#'   \item{geometry}{\code{MULTIPOLYGON} of vertices for that region}
-#' }
 #' @examples
 #' data(schaefer17_100)
+#' data(schaefer17_200)
+#' data(schaefer17_400)
+#' data(schaefer17_500)
+#' data(schaefer17_600)
+#' data(schaefer17_700)
 "schaefer17_100"
 
 #' @rdname schaefer17
 "schaefer17_200"
+
+#' @rdname schaefer17
+"schaefer17_400"
+
+#' @rdname schaefer17
+"schaefer17_500"
+
+#' @rdname schaefer17
+"schaefer17_600"
+
+#' @rdname schaefer17
+"schaefer17_700"
+
 
 ### 3d meshes ----
 
@@ -77,7 +99,7 @@
 #' @usage data(schaefer7_400_3d)
 #' @family ggseg3d_atlases
 #' @keywords datasets
-#'
+#' @importFrom ggseg brain_atlas
 #'
 #' @references Schaefer et al. (2018) Cereb Cortex. 2018 Sep 1;28(9):3095-3114. doi: 10.1093/cercor/bhx179
 #' (\href{https://www.ncbi.nlm.nih.gov/pubmed/28981612}{PubMed})
@@ -187,3 +209,4 @@
 
 #' @rdname schaefer17_3d
 "schaefer17_1000_3d"
+

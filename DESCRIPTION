@@ -18,11 +18,12 @@ Description: This is a support package for the ggseg, and ggseg3d packages.
 License: MIT + file LICENSE
 Encoding: UTF-8
 RoxygenNote: 7.1.1
-Depends: R (>= 2.10)
+Depends: R (>= 3.5.0)
 LazyData: true
-Suggests:
+Imports:
     ggseg,
-    ggseg3d,
+    ggseg3d
+Suggests:
     ggsegExtra,
     tidyverse,
     ggplot2,
@@ -33,7 +34,6 @@ Suggests:
     testthat (>= 2.1.0),
     devtools,
     renv,
-    reticulate,
     freesurfer,
     roxygen2
 VignetteBuilder: knitr

@@ -13,20 +13,27 @@ options(freesurfer.path = tail(list.files("/Applications/freesurfer", full.names
 
 ## wrapper definition ----
 
-make_schaefer_3d <- function (n_parcels, n_networks) {
+make_schaefer_3d <- function (n_parcels, n_networks, ...) {
 
   out <- tibble(hemi = c("lh", "rh")) %>%
     mutate(atlas3d = map(hemi,
                          ~ggsegExtra::make_aparc_2_3datlas(annot = glue::glue("Schaefer2018_{n_parcels}Parcels_{n_networks}Networks_order"),
                                                            hemisphere = .x,
-                                                           surface = "inflated",
+                                                           surface = c("LCBC", "white", "inflated"),
                                                            subjects_dir = here::here("data-raw"),
-                                                           output_dir = here::here("data-raw", "temp")
+                                                           output_dir = here::here("data-raw", "temp"),
+                                                           ...
                          ))) %>%
     # get only the atlas3d column to fold both hemi atlases into one df
     select(-hemi) %>%
     unnest(atlas3d) %>%
-    mutate(atlas = str_remove(atlas, "order_")) %>%
+    mutate(
+      atlas = str_remove(atlas, "order_"),
+      region = str_remove(region, "17Networks_|RH_|LH_"),
+      region = ifelse(grepl("Background", region), NA, region),
+      network = str_split_fixed(region, "_", 2),
+      network = ifelse(network[,1] == "", NA_character_, network[,1])
+    ) %>%
     ggseg3d::as_ggseg3d_atlas()
 
   return (out)
