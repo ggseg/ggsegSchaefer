@@ -39,7 +39,7 @@ make_schaefer_3d <- function (n_parcels, n_networks, ...) {
   return (out)
 }
 
-make_schaefer_2d <- function (atlas, n_parcels, n_networks) {
+make_schaefer_2d <- function (atlas, n_parcels, n_networks, output_dir = here::here("data-raw", "temp"), tolerance = 2) {
 
   atlas_name <- unique(atlas$atlas) %>%
     str_remove("_3d")
@@ -51,9 +51,9 @@ make_schaefer_2d <- function (atlas, n_parcels, n_networks) {
             "full_left_medial.png",
             "full_right_lateral.png",
             "full_right_medial.png") %in%
-          list.files(here::here("data-raw", "temp", atlas_name)))) {
+          list.files(paste(output_dir, atlas_name, sep = "/")))) {
     these_steps <- 1:7
-  } else if (list.files(here::here("data-raw", "temp", atlas_name, "img")) %>%
+  } else if (list.files(paste(output_dir, atlas_name, "img", sep = "/")) %>%
       # count just the unique ROI number x hemisphere combos
       str_split("_") %>%
       map(~.[-3]) %>%
@@ -63,14 +63,14 @@ make_schaefer_2d <- function (atlas, n_parcels, n_networks) {
     # roi 0001 seems consistently to be freesurfer background
     # so expect n_parcels+2 total files to exist if it's done
     these_steps <- 2:7
-  } else if (list.files(here::here("data-raw", "temp", atlas_name, "masks")) %>%
+  } else if (list.files(paste(output_dir, atlas_name, "masks", sep = "/")) %>%
       # count just the unique ROI number x hemisphere combos
       str_split("_") %>%
       map(~.[-3]) %>%
       map_chr(str_flatten, collapse = "_") %>%
       unique() %>%
       length() < n_parcels + 2 &
-      list.files(here::here("data-raw", "temp", atlas_name, "regions")) %>%
+      list.files(paste(output_dir, atlas_name, "regions", sep = "/")) %>%
       # count just the unique ROI number x hemisphere combos
       str_split("_") %>%
       map(~.[-3]) %>%
@@ -78,11 +78,11 @@ make_schaefer_2d <- function (atlas, n_parcels, n_networks) {
       unique() %>%
       length() < n_parcels + 2) {
     these_steps <- 3:7
-  } else if (!("contours.rda" %in% list.files(here::here("data-raw", "temp", atlas_name)))) {
+  } else if (!("contours.rda" %in% list.files(paste(output_dir, atlas_name, sep = "/")))) {
     these_steps <- 4:7
-  } else if (!("contours_smoothed.rda" %in% list.files(here::here("data-raw", "temp", atlas_name)))) {
+  } else if (!("contours_smoothed.rda" %in% list.files(paste(output_dir, atlas_name, sep = "/")))) {
     these_steps <- 5:7
-  } else if (!("contours_reduced.rda" %in% list.files(here::here("data-raw", "temp", atlas_name)))) {
+  } else if (!("contours_reduced.rda" %in% list.files(paste(output_dir, atlas_name, sep = "/")))) {
     these_steps <- 6:7
   } else {
     these_steps <- 7
@@ -90,8 +90,8 @@ make_schaefer_2d <- function (atlas, n_parcels, n_networks) {
 
   out <- ggsegExtra::make_ggseg3d_2_ggseg(ggseg3d_atlas = atlas,
                                           steps = these_steps,
-                                          output_dir = here::here("data-raw", "temp"),
-                                          tolerance = 2)
+                                          output_dir = output_dir,
+                                          tolerance = tolerance)
 
   return (out)
 }
