@@ -5,18 +5,31 @@
 \alias{schaefer7}
 \alias{schaefer7_100}
 \alias{schaefer7_200}
+\alias{schaefer7_300}
 \alias{schaefer7_400}
+\alias{schaefer7_500}
+\alias{schaefer7_600}
+\alias{schaefer7_700}
+\alias{schaefer7_800}
+\alias{schaefer7_900}
+\alias{schaefer7_1000}
 \title{Local-Global 7-Network Parcellation of the Human Cerebral Cortex}
 \format{
-A \code{brain_atlas} with 1 observation per ROI and 6 variables
-\describe{
-  \item{hemi}{name of the hemisphere (left, right)}
-  \item{side}{which side to view (medial, lateral)}
-  \item{region}{name of region}
-  \item{label}{label from recon-all segmentation}
-  \item{roi}{ROI number in the original atlas lookup table}
-  \item{geometry}{\code{MULTIPOLYGON} of vertices for that region}
-}
+An object of class \code{brain_atlas} of length 4.
+
+An object of class \code{brain_atlas} of length 4.
+
+An object of class \code{brain_atlas} of length 4.
+
+An object of class \code{brain_atlas} of length 4.
+
+An object of class \code{brain_atlas} of length 4.
+
+An object of class \code{brain_atlas} of length 4.
+
+An object of class \code{brain_atlas} of length 4.
+
+An object of class \code{brain_atlas} of length 4.
 
 An object of class \code{brain_atlas} of length 4.
 
@@ -27,7 +40,21 @@ data(schaefer7_100)
 
 schaefer7_200
 
+schaefer7_300
+
 schaefer7_400
+
+schaefer7_500
+
+schaefer7_600
+
+schaefer7_700
+
+schaefer7_800
+
+schaefer7_900
+
+schaefer7_1000
 }
 \description{
 Coordinate data for the Schaefer et al. (2018) cortical atlas,
@@ -40,6 +67,19 @@ data(schaefer7_100)
 \references{
 Schaefer et al. (2018) Cereb Cortex. 2018 Sep 1;28(9):3095-3114. doi: 10.1093/cercor/bhx179
 (\href{https://www.ncbi.nlm.nih.gov/pubmed/28981612}{PubMed})
+
+\itemize{
+ \item{schaefer7_100}{ 100 parellation of the 7 networks}
+ \item{schaefer7_200}{ 200 parellation of the 7 networks}
+ \item{schaefer7_300}{ 300 parellation of the 7 networks}
+ \item{schaefer7_400}{ 400 parellation of the 7 networks}
+ \item{schaefer7_500}{ 500 parellation of the 7 networks}
+ \item{schaefer7_600}{ 600 parellation of the 7 networks}
+ \item{schaefer7_700}{ 700 parellation of the 7 networks}
+ \item{schaefer7_900}{ 800 parellation of the 7 networks}
+ \item{schaefer7_900}{ 900 parellation of the 7 networks}
+ \item{schaefer7_1000}{ 1000 parellation of th 7 networks}
+}
 }
 \seealso{
 Other ggseg_atlases: 

@@ -15,15 +15,18 @@
 #' @references Schaefer et al. (2018) Cereb Cortex. 2018 Sep 1;28(9):3095-3114. doi: 10.1093/cercor/bhx179
 #' (\href{https://www.ncbi.nlm.nih.gov/pubmed/28981612}{PubMed})
 #'
-#' @format A \code{brain_atlas} with 1 observation per ROI and 6 variables
-#' \describe{
-#'   \item{hemi}{name of the hemisphere (left, right)}
-#'   \item{side}{which side to view (medial, lateral)}
-#'   \item{region}{name of region}
-#'   \item{label}{label from recon-all segmentation}
-#'   \item{roi}{ROI number in the original atlas lookup table}
-#'   \item{geometry}{\code{MULTIPOLYGON} of vertices for that region}
-#' }
+#' \itemize{
+#'  \item{schaefer7_100}{ 100 parellation of the 7 networks}
+#'  \item{schaefer7_200}{ 200 parellation of the 7 networks}
+#'  \item{schaefer7_300}{ 300 parellation of the 7 networks}
+#'  \item{schaefer7_400}{ 400 parellation of the 7 networks}
+#'  \item{schaefer7_500}{ 500 parellation of the 7 networks}
+#'  \item{schaefer7_600}{ 600 parellation of the 7 networks}
+#'  \item{schaefer7_700}{ 700 parellation of the 7 networks}
+#'  \item{schaefer7_900}{ 800 parellation of the 7 networks}
+#'  \item{schaefer7_900}{ 900 parellation of the 7 networks}
+#'  \item{schaefer7_1000}{ 1000 parellation of th 7 networks}
+#'}
 #'
 #' @import ggseg
 #' @import ggseg3d
@@ -36,7 +39,29 @@
 "schaefer7_200"
 
 #' @rdname schaefer7
+"schaefer7_300"
+
+#' @rdname schaefer7
 "schaefer7_400"
+
+#' @rdname schaefer7
+"schaefer7_500"
+
+#' @rdname schaefer7
+"schaefer7_600"
+
+#' @rdname schaefer7
+"schaefer7_700"
+
+#' @rdname schaefer7
+"schaefer7_800"
+
+#' @rdname schaefer7
+"schaefer7_900"
+
+#' @rdname schaefer7
+"schaefer7_1000"
+
 
 #' Local-Global 17-Network Parcellation of the Human Cerebral Cortex
 #'
@@ -47,10 +72,14 @@
 #' \itemize{
 #'  \item{schaefer17_100}{ 100 parellation of the 17 networks}
 #'  \item{schaefer17_200}{ 200 parellation of the 17 networks}
+#'  \item{schaefer17_300}{ 300 parellation of the 17 networks}
 #'  \item{schaefer17_400}{ 400 parellation of the 17 networks}
 #'  \item{schaefer17_500}{ 500 parellation of the 17 networks}
 #'  \item{schaefer17_600}{ 600 parellation of the 17 networks}
 #'  \item{schaefer17_700}{ 700 parellation of the 17 networks}
+#'  \item{schaefer17_900}{ 800 parellation of the 17 networks}
+#'  \item{schaefer17_900}{ 900 parellation of the 17 networks}
+#'  \item{schaefer17_1000}{ 1000 parellation of the 17 networks}
 #' }
 #'
 #' @docType data
@@ -65,14 +94,21 @@
 #' @examples
 #' data(schaefer17_100)
 #' data(schaefer17_200)
+#' data(schaefer17_300)
 #' data(schaefer17_400)
 #' data(schaefer17_500)
 #' data(schaefer17_600)
 #' data(schaefer17_700)
+#' data(schaefer17_800)
+#' data(schaefer17_900)
+#' data(schaefer17_1000)
 "schaefer17_100"
 
 #' @rdname schaefer17
 "schaefer17_200"
+
+#' @rdname schaefer17
+"schaefer17_300"
 
 #' @rdname schaefer17
 "schaefer17_400"
@@ -85,6 +121,15 @@
 
 #' @rdname schaefer17
 "schaefer17_700"
+
+#' @rdname schaefer17
+"schaefer17_800"
+
+#' @rdname schaefer17
+"schaefer17_900"
+
+#' @rdname schaefer17
+"schaefer17_1000"
 
 
 ### 3d meshes ----
