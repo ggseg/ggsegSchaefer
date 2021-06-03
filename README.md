@@ -1,14 +1,11 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# ggsegSchaefer
+# ggsegSchaefer <img src='man/figures/logo.png' align="right" height="138.5" />
 
 <!-- badges: start -->
 
-[![Travis build
-status](https://travis-ci.com/LCBC-UiO/ggsegSchaefer.svg?branch=master)](https://travis-ci.com/LCBC-UiO/ggsegSchaefer)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/LCBC-UiO/ggsegSchaefer?branch=master&svg=true)](https://ci.appveyor.com/project/LCBC-UiO/ggsegSchaefer)
+[![DOI](https://zenodo.org/badge/250276444.svg)](https://zenodo.org/badge/latestdoi/250276444)
 [![Codecov test
 coverage](https://codecov.io/gh/LCBC-UiO/ggsegSchaefer/branch/master/graph/badge.svg)](https://codecov.io/gh/LCBC-UiO/ggsegSchaefer?branch=master)
 [![R build
@@ -19,6 +16,19 @@ This package contains dataset for plotting the Shaefer cortical atlas
 ggseg and ggseg3d.
 
 ## Installation
+
+We recommend installing the ggseg-atlases through the ggseg
+[r-universe](https://ggseg.r-universe.dev/ui#builds):
+
+``` r
+# Enable this universe
+options(repos = c(
+    ggseg = 'https://ggseg.r-universe.dev',
+    CRAN = 'https://cloud.r-project.org'))
+
+# Install some packages
+install.packages('ggsegSchaefer')
+```
 
 You can install the released version of ggsegSchaefer from
 [GitHub](https://github.com/) with:
@@ -36,7 +46,7 @@ library(ggsegSchaefer)
 
 ``` r
 library(ggseg)
-#> Loading required package: ggplot2
+library(ggplot2)
 
 plot(schaefer7) +
   theme(legend.position = "bottom",
@@ -44,17 +54,16 @@ plot(schaefer7) +
   guides(fill = guide_legend(ncol = 4))
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
 
 ``` r
-
 plot(schaefer17) +
   theme(legend.position = "bottom",
         legend.text = element_text(size = 7)) +
   guides(fill = guide_legend(ncol = 4))
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-2.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-4-2.png" width="100%" />
 
 ``` r
 library(ggseg3d)

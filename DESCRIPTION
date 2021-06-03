@@ -1,6 +1,6 @@
 Package: ggsegSchaefer
 Title: Schaefer datasets for the ggseg-plotting tool
-Version: 1.0.01
+Version: 1.0.1.001
 Authors@R: c(person("Athanasia Mo", "Mowinckel", 
                     email = "a.m.mowinckel@psykologi.uio.no", 
                     role = c("aut", "cre"),
@@ -16,6 +16,7 @@ Encoding: UTF-8
 RoxygenNote: 7.1.1
 Depends: R (>= 2.10)
 LazyData: true
+LazyDataCompression: xz
 Suggests:
     ggseg,
     ggseg3d,
