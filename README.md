@@ -5,18 +5,29 @@
 
 <!-- badges: start -->
 
-[![Travis build
-status](https://travis-ci.com/LCBC-UiO/ggsegSchaefer.svg?branch=master)](https://travis-ci.com/LCBC-UiO/ggsegSchaefer)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/LCBC-UiO/ggsegSchaefer?branch=master&svg=true)](https://ci.appveyor.com/project/LCBC-UiO/ggsegSchaefer)
 [![Codecov test
 coverage](https://codecov.io/gh/LCBC-UiO/ggsegSchaefer/branch/master/graph/badge.svg)](https://codecov.io/gh/LCBC-UiO/ggsegSchaefer?branch=master)
+[![R-CMD-check](https://github.com/ggseg/ggsegSchaefer/workflows/R-CMD-check/badge.svg)](https://github.com/ggseg/ggsegSchaefer/actions)
 <!-- badges: end -->
 
 This package contains dataset for plotting the Shaefer cortical atlas
-ggseg and ggseg3d.
+ggseg and ggseg3d. Now includes sets for the 17 and 7 network atlas, for
+parcellations 100:1000.
 
 ## Installation
+
+The best experience installing ggsegSchaefer is through the [ggseg
+r-universe](https://ggseg.r-universe.dev/ui#builds):
+
+``` r
+# Enable this universe
+options(repos = c(
+    ggseg = 'https://ggseg.r-universe.dev',
+    CRAN = 'https://cloud.r-project.org'))
+
+# Install some packages
+install.packages('ggseg')
+```
 
 You can install the released version of ggsegSchaefer from
 [GitHub](https://github.com/) with:
@@ -41,20 +52,23 @@ ggplot() +
              position = position_brain(hemi ~ side)) + 
   scale_fill_brain("schaefer7_400", package = "ggsegSchaefer") +
   guides(fill = FALSE)
+#> Warning: `guides(<scale> = FALSE)` is deprecated. Please use `guides(<scale> =
+#> "none")` instead.
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
 
 ``` r
-
 ggplot() +
   geom_brain(atlas = schaefer17_100,
              position = position_brain(hemi ~ side)) + 
   scale_fill_brain("schaefer17_100", package = "ggsegSchaefer") +
   guides(fill = FALSE)
+#> Warning: `guides(<scale> = FALSE)` is deprecated. Please use `guides(<scale> =
+#> "none")` instead.
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-2.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-4-2.png" width="100%" />
 
 ``` r
 library(ggseg3d)

@@ -19,14 +19,26 @@ devtools::load_all(".")
 # ggsegSchaefer
 
 <!-- badges: start -->
-[![Travis build status](https://travis-ci.com/LCBC-UiO/ggsegSchaefer.svg?branch=master)](https://travis-ci.com/LCBC-UiO/ggsegSchaefer)
-[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/LCBC-UiO/ggsegSchaefer?branch=master&svg=true)](https://ci.appveyor.com/project/LCBC-UiO/ggsegSchaefer)
 [![Codecov test coverage](https://codecov.io/gh/LCBC-UiO/ggsegSchaefer/branch/master/graph/badge.svg)](https://codecov.io/gh/LCBC-UiO/ggsegSchaefer?branch=master)
+[![R-CMD-check](https://github.com/ggseg/ggsegSchaefer/workflows/R-CMD-check/badge.svg)](https://github.com/ggseg/ggsegSchaefer/actions)
 <!-- badges: end -->
 
-This package contains dataset for plotting the Shaefer cortical atlas ggseg and ggseg3d. 
+This package contains dataset for plotting the Shaefer cortical atlas ggseg and ggseg3d. Now includes sets for the 17 and 7 network atlas, for parcellations 100:1000. 
 
 ## Installation
+
+The best experience installing ggsegSchaefer is through the [ggseg r-universe](https://ggseg.r-universe.dev/ui#builds):
+
+```{r, eval = FALSE}
+# Enable this universe
+options(repos = c(
+    ggseg = 'https://ggseg.r-universe.dev',
+    CRAN = 'https://cloud.r-project.org'))
+
+# Install some packages
+install.packages('ggseg')
+```
+
 
 You can install the released version of ggsegSchaefer from [GitHub](https://github.com/) with:
 
