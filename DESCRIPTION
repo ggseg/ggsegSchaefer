@@ -1,6 +1,6 @@
 Package: ggsegSchaefer
 Title: Schaefer datasets for the ggseg-plotting tool
-Version: 2.0
+Version: 2.0.1
 Authors@R: c(person("Athanasia Mo", "Mowinckel", 
                     email = "a.m.mowinckel@psykologi.uio.no", 
                     role = c("aut", "cre"),
