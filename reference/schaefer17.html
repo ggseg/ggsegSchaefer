@@ -6,15 +6,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Local-Global 17 Parcellation of the Human Cerebral Cortex — schaefer17 • ggsegSchaefer</title>
+<title>Local-Global 17-Network Parcellation of the Human Cerebral Cortex — schaefer17 • ggsegSchaefer</title>
 
-<!-- favicons -->
-<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
-<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
-<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
-<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -46,10 +39,10 @@
 
 
 
-<meta property="og:title" content="Local-Global 17 Parcellation of the Human Cerebral Cortex — schaefer17" />
-<meta property="og:description" content="Coordinate data for the Desikan-Killany Cortical atlas,
-with 40 regions in on the cortical surface of the brain." />
-<meta property="og:image" content="https://lcbc-uio.github.io/ggsegSchaefer/logo.svg" />
+<meta property="og:title" content="Local-Global 17-Network Parcellation of the Human Cerebral Cortex — schaefer17" />
+<meta property="og:description" content="Coordinate data for the Schaefer et al. (2018) cortical atlas,
+with 100-1000 regions on the cortical surface of the brain, aligned with
+17 previously described functional networks (Yeo et al., 2011)." />
 
 
 
@@ -81,7 +74,7 @@ with 40 regions in on the cortical surface of the brain." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ggsegSchaefer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.1.001</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0.1</span>
       </span>
     </div>
 
@@ -95,9 +88,6 @@ with 40 regions in on the cortical surface of the brain." />
 </li>
 <li>
   <a href="../reference/index.html">Reference</a>
-</li>
-<li>
-  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -120,31 +110,65 @@ with 40 regions in on the cortical surface of the brain." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Local-Global 17 Parcellation of the Human Cerebral Cortex</h1>
+    <h1>Local-Global 17-Network Parcellation of the Human Cerebral Cortex</h1>
     <small class="dont-index">Source: <a href='https://github.com/LCBC-UiO/ggsegSchaefer/blob/master/R/schaefer.R'><code>R/schaefer.R</code></a></small>
     <div class="hidden name"><code>schaefer17.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Coordinate data for the Desikan-Killany Cortical atlas,
-with 40 regions in on the cortical surface of the brain.</p>
+    <p>Coordinate data for the Schaefer et al. (2018) cortical atlas,
+with 100-1000 regions on the cortical surface of the brain, aligned with
+17 previously described functional networks (Yeo et al., 2011).</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>schaefer17</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>schaefer17</span><span class='op'>)</span>
+
+<span class='va'>schaefer17_200</span>
+
+<span class='va'>schaefer17_300</span>
+
+<span class='va'>schaefer17_400</span>
+
+<span class='va'>schaefer17_500</span>
+
+<span class='va'>schaefer17_600</span>
+
+<span class='va'>schaefer17_700</span>
+
+<span class='va'>schaefer17_800</span>
+
+<span class='va'>schaefer17_900</span>
+
+<span class='va'>schaefer17_1000</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data.frame with 10913 observations and 11 variables</p><dl>
-  <dt>long</dt><dd><p>coordinates for the x-axis</p></dd>
-  <dt>lat</dt><dd><p>coordinates for the y-axis</p></dd>
-  <dt>region</dt><dd><p>name of region</p></dd>
-  <dt>hemi</dt><dd><p>name of the hemisphere (left, right)</p></dd>
-  <dt>side</dt><dd><p>which side to view (medial, lateral)</p></dd>
-  <dt>label</dt><dd><p>label from recon-all segmentation</p></dd>
-  <dt>atlas</dt><dd><p>name of the atlas</p></dd>
+    <p>An object of class <code>brain_atlas</code> of length 4.</p>
+<p>An object of class <code>brain_atlas</code> of length 4.</p>
+<p>An object of class <code>brain_atlas</code> of length 4.</p>
+<p>An object of class <code>brain_atlas</code> of length 4.</p>
+<p>An object of class <code>brain_atlas</code> of length 4.</p>
+<p>An object of class <code>brain_atlas</code> of length 4.</p>
+<p>An object of class <code>brain_atlas</code> of length 4.</p>
+<p>An object of class <code>brain_atlas</code> of length 4.</p>
+<p>An object of class <code>brain_atlas</code> of length 4.</p>
+<p>An object of class <code>brain_atlas</code> of length 4.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-</dl>
+    
+<ul>
+<li><p>schaefer17_100 100 parellation of the 17 networks</p></li>
+<li><p>schaefer17_200 200 parellation of the 17 networks</p></li>
+<li><p>schaefer17_300 300 parellation of the 17 networks</p></li>
+<li><p>schaefer17_400 400 parellation of the 17 networks</p></li>
+<li><p>schaefer17_500 500 parellation of the 17 networks</p></li>
+<li><p>schaefer17_600 600 parellation of the 17 networks</p></li>
+<li><p>schaefer17_700 700 parellation of the 17 networks</p></li>
+<li><p>schaefer17_900 800 parellation of the 17 networks</p></li>
+<li><p>schaefer17_900 900 parellation of the 17 networks</p></li>
+<li><p>schaefer17_1000 1000 parellation of the 17 networks</p></li>
+</ul>
 
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -156,7 +180,16 @@ with 40 regions in on the cortical surface of the brain.</p>
 <code><a href='schaefer7.html'>schaefer7</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>schaefer17</span><span class='op'>)</span>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>schaefer17_100</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>schaefer17_200</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>schaefer17_300</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>schaefer17_400</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>schaefer17_500</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>schaefer17_600</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>schaefer17_700</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>schaefer17_800</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>schaefer17_900</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>schaefer17_1000</span><span class='op'>)</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
