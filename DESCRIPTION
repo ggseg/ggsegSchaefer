@@ -39,7 +39,8 @@ Suggests:
     roxygen2
 VignetteBuilder: knitr
 Remotes: 
-    LCBC-UiO/ggseg,
-    LCBC-UiO/ggseg3d
+    ggseg/ggseg,
+    ggseg/ggseg3d,
+    ggseg/ggsegExtra
 URL: https://github.com/LCBC-UiO/ggsegSchaefer
 BugReports: https://github.com/LCBC-UiO/ggsegSchaefer/issues
