@@ -3,28 +3,89 @@
 \docType{data}
 \name{schaefer17}
 \alias{schaefer17}
-\title{Local-Global 17 Parcellation of the Human Cerebral Cortex}
+\alias{schaefer17_100}
+\alias{schaefer17_200}
+\alias{schaefer17_300}
+\alias{schaefer17_400}
+\alias{schaefer17_500}
+\alias{schaefer17_600}
+\alias{schaefer17_700}
+\alias{schaefer17_800}
+\alias{schaefer17_900}
+\alias{schaefer17_1000}
+\title{Local-Global 17-Network Parcellation of the Human Cerebral Cortex}
 \format{
-A data.frame with 10913 observations and 11 variables
-\describe{
-  \item{long}{coordinates for the x-axis}
-  \item{lat}{coordinates for the y-axis}
-  \item{region}{name of region}
-  \item{hemi}{name of the hemisphere (left, right)}
-  \item{side}{which side to view (medial, lateral)}
-  \item{label}{label from recon-all segmentation}
-  \item{atlas}{name of the atlas}
-}
+An object of class \code{brain_atlas} of length 4.
+
+An object of class \code{brain_atlas} of length 4.
+
+An object of class \code{brain_atlas} of length 4.
+
+An object of class \code{brain_atlas} of length 4.
+
+An object of class \code{brain_atlas} of length 4.
+
+An object of class \code{brain_atlas} of length 4.
+
+An object of class \code{brain_atlas} of length 4.
+
+An object of class \code{brain_atlas} of length 4.
+
+An object of class \code{brain_atlas} of length 4.
+
+An object of class \code{brain_atlas} of length 4.
 }
 \usage{
 data(schaefer17)
+
+schaefer17_200
+
+schaefer17_300
+
+schaefer17_400
+
+schaefer17_500
+
+schaefer17_600
+
+schaefer17_700
+
+schaefer17_800
+
+schaefer17_900
+
+schaefer17_1000
 }
 \description{
-Coordinate data for the Desikan-Killany Cortical atlas,
-with 40 regions in on the cortical surface of the brain.
+Coordinate data for the Schaefer et al. (2018) cortical atlas,
+with 100-1000 regions on the cortical surface of the brain, aligned with
+17 previously described functional networks (Yeo et al., 2011).
+}
+\details{
+\itemize{
+ \item{schaefer17_100}{ 100 parellation of the 17 networks}
+ \item{schaefer17_200}{ 200 parellation of the 17 networks}
+ \item{schaefer17_300}{ 300 parellation of the 17 networks}
+ \item{schaefer17_400}{ 400 parellation of the 17 networks}
+ \item{schaefer17_500}{ 500 parellation of the 17 networks}
+ \item{schaefer17_600}{ 600 parellation of the 17 networks}
+ \item{schaefer17_700}{ 700 parellation of the 17 networks}
+ \item{schaefer17_900}{ 800 parellation of the 17 networks}
+ \item{schaefer17_900}{ 900 parellation of the 17 networks}
+ \item{schaefer17_1000}{ 1000 parellation of the 17 networks}
+}
 }
 \examples{
-data(schaefer17)
+data(schaefer17_100)
+data(schaefer17_200)
+data(schaefer17_300)
+data(schaefer17_400)
+data(schaefer17_500)
+data(schaefer17_600)
+data(schaefer17_700)
+data(schaefer17_800)
+data(schaefer17_900)
+data(schaefer17_1000)
 }
 \references{
 Schaefer et al. (2018) Cereb Cortex. 2018 Sep 1;28(9):3095-3114. doi: 10.1093/cercor/bhx179

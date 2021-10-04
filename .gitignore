@@ -3,6 +3,10 @@
 .RData
 .Ruserdata
 docs/
-data-raw/fsaverage5/
-data-raw/Schaefer*/
-data-raw/schaefer*/
+*.DS_Store
+renv/*
+.Rprofile
+python/*
+!python/environment.yml
+data-raw/temp/*
+data-raw/fsaverage5/*
