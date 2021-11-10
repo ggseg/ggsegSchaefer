@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# ggsegSchaefer
+# ggsegExtra <img src="man/figures/logo.png" align="right" alt="" width="120" />
 
 <!-- badges: start -->
 
@@ -26,7 +26,7 @@ options(repos = c(
     CRAN = 'https://cloud.r-project.org'))
 
 # Install some packages
-install.packages('ggseg')
+install.packages('ggsegSchaefer')
 ```
 
 You can install the released version of ggsegSchaefer from
@@ -41,12 +41,22 @@ remotes::install_github("LCBC-UiO/ggsegSchaefer")
 
 ``` r
 library(ggsegSchaefer)
+#> Loading required package: ggplot2
+#> Loading required package: ggseg
+#> Warning: package 'ggseg' was built under R version 4.1.1
+#> Loading required package: ggseg3d
+library(dplyr)
+#> 
+#> Attaching package: 'dplyr'
+#> The following objects are masked from 'package:stats':
+#> 
+#>     filter, lag
+#> The following objects are masked from 'package:base':
+#> 
+#>     intersect, setdiff, setequal, union
 ```
 
 ``` r
-library(ggplot2)
-library(ggseg)
-
 ggplot() +
   geom_brain(atlas = schaefer7_400,
              position = position_brain(hemi ~ side)) + 
@@ -71,8 +81,6 @@ ggplot() +
 <img src="man/figures/README-unnamed-chunk-4-2.png" width="100%" />
 
 ``` r
-library(ggseg3d)
-
 ggseg3d(atlas = schaefer7_400_3d, surface = "inflated") %>% 
   pan_camera("right lateral")
 ```
@@ -80,8 +88,6 @@ ggseg3d(atlas = schaefer7_400_3d, surface = "inflated") %>%
 <img src="man/figures/README-s7-3d-plot.png" width="100%" />
 
 ``` r
-library(ggseg3d)
-
 ggseg3d(atlas = schaefer17_100_3d, surface = "inflated") %>% 
   pan_camera("right lateral")
 ```

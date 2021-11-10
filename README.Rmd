@@ -13,10 +13,9 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 Sys.setenv(PATH = paste("/opt/miniconda3/bin", Sys.getenv("PATH"),sep=":"))
-devtools::load_all(".")
 ```
 
-# ggsegSchaefer
+# ggsegExtra <img src="man/figures/logo.png" align="right" alt="" width="120" />  
 
 <!-- badges: start -->
 [![Codecov test coverage](https://codecov.io/gh/LCBC-UiO/ggsegSchaefer/branch/master/graph/badge.svg)](https://codecov.io/gh/LCBC-UiO/ggsegSchaefer?branch=master)
@@ -36,7 +35,7 @@ options(repos = c(
     CRAN = 'https://cloud.r-project.org'))
 
 # Install some packages
-install.packages('ggseg')
+install.packages('ggsegSchaefer')
 ```
 
 
@@ -51,11 +50,10 @@ remotes::install_github("LCBC-UiO/ggsegSchaefer")
 
 ```{r}
 library(ggsegSchaefer)
+library(dplyr)
 ```
 
 ```{r, fig.height=10}
-library(ggplot2)
-library(ggseg)
 
 ggplot() +
   geom_brain(atlas = schaefer7_400,
@@ -71,15 +69,11 @@ ggplot() +
 ```
 
 ```{r "noneval", eval=FALSE}
-library(ggseg3d)
-
 ggseg3d(atlas = schaefer7_400_3d, surface = "inflated") %>% 
   pan_camera("right lateral")
 ```
 
 ```{r "orca", include=FALSE}
-library(ggseg3d)
-
 p <- ggseg3d(atlas = schaefer7_400_3d, surface = "inflated") %>%
   pan_camera("right lateral") %>%
   plotly::add_annotations( text="Screen capture",
@@ -96,8 +90,6 @@ knitr::include_graphics("man/figures/README-s7-3d-plot.png")
 
 
 ```{r "noneval1", eval=FALSE}
-library(ggseg3d)
-
 ggseg3d(atlas = schaefer17_100_3d, surface = "inflated") %>% 
   pan_camera("right lateral")
 ```
