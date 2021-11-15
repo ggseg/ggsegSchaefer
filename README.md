@@ -1,13 +1,14 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# ggsegExtra <img src="man/figures/logo.png" align="right" alt="" width="120" />
+# ggsegSchaefer <img src="man/figures/logo.png" align="right" alt="" width="120" />
 
 <!-- badges: start -->
 
-[![Codecov test
-coverage](https://codecov.io/gh/LCBC-UiO/ggsegSchaefer/branch/master/graph/badge.svg)](https://codecov.io/gh/LCBC-UiO/ggsegSchaefer?branch=master)
 [![R-CMD-check](https://github.com/ggseg/ggsegSchaefer/workflows/R-CMD-check/badge.svg)](https://github.com/ggseg/ggsegSchaefer/actions)
+[![DOI](https://zenodo.org/badge/250276444.svg)](https://zenodo.org/badge/latestdoi/250276444)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/ggsegSchaefer)](https://CRAN.R-project.org/package=ggsegSchaefer)
 <!-- badges: end -->
 
 This package contains dataset for plotting the Shaefer cortical atlas

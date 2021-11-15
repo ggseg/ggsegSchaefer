@@ -1,6 +1,6 @@
 Package: ggsegSchaefer
 Title: Schaefer datasets for the ggseg-plotting tool
-Version: 2.0.2
+Version: 2.0.3
 Authors@R: c(person("Athanasia Mo", "Mowinckel", 
                     email = "a.m.mowinckel@psykologi.uio.no", 
                     role = c("aut", "cre"),
@@ -18,12 +18,13 @@ Description: This is a support package for the ggseg, and ggseg3d packages.
 License: MIT + file LICENSE
 Encoding: UTF-8
 RoxygenNote: 7.1.1
-Depends: R (>= 3.5.0),
+Depends: R (>= 3.5.0)
+LazyData: true
+LazyDataCompression: xz
+Imports: 
     ggplot2,
     ggseg,
     ggseg3d
-LazyData: true
-LazyDataCompression: xz
 Suggests:
     ggsegExtra,
     tidyverse,
@@ -35,7 +36,7 @@ Suggests:
     devtools,
     renv,
     freesurfer,
-    roxygen2
+    roxygen2,
 VignetteBuilder: knitr
 Remotes: 
     ggseg/ggseg,

@@ -30,6 +30,7 @@
 #'
 #' @import ggseg
 #' @import ggseg3d
+#' @import ggplot2
 #'
 #' @examples
 #' data(schaefer7_100)
