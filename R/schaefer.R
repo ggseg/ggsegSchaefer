@@ -85,7 +85,7 @@
 #'
 #' @docType data
 #' @name schaefer17
-#' @usage data(schaefer17)
+#' @usage data(schaefer17_100)
 #' @keywords datasets
 #' @family ggseg_atlases
 #'
