@@ -1,6 +1,6 @@
 Package: ggsegSchaefer
 Title: Schaefer datasets for the ggseg-plotting tool
-Version: 2.0.3
+Version: 2.0.4
 Authors@R: c(person("Athanasia Mo", "Mowinckel", 
                     email = "a.m.mowinckel@psykologi.uio.no", 
                     role = c("aut", "cre"),
@@ -39,8 +39,6 @@ Suggests:
     roxygen2,
 VignetteBuilder: knitr
 Remotes: 
-    ggseg/ggseg,
-    ggseg/ggseg3d,
     ggseg/ggsegExtra
 URL: https://github.com/LCBC-UiO/ggsegSchaefer
 BugReports: https://github.com/LCBC-UiO/ggsegSchaefer/issues
