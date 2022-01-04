@@ -17,8 +17,8 @@ schaefer7_200_3d <- schaefer7_200_3d %>%
   ggseg3d::as_ggseg3d_atlas()
 
 # schaefer7_200 <- make_schaefer_2d(schaefer7_200_3d, 7, 200)
-schaefer7_200 <- make_ggseg3d_2_ggseg(schaefer7_200,
-                                      toleranse = 1,
+schaefer7_200 <- make_ggseg3d_2_ggseg(schaefer7_200_3d,
+                                      ncores = 16,
                                       output_dir = "~/Desktop")
 
 ## write out ----
