@@ -10,6 +10,7 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.path = "man/figures/README-",
   fig.width = 6,
+  fig.retina = 3,
   out.width = "100%"
 )
 Sys.setenv(PATH = paste("/opt/miniconda3/bin", Sys.getenv("PATH"),sep=":"))
@@ -51,23 +52,29 @@ remotes::install_github("LCBC-UiO/ggsegSchaefer")
 
 ```{r}
 library(ggsegSchaefer)
+library(ggseg)
+library(ggseg3d)
+library(ggplot2)
 library(dplyr)
 ```
 
-```{r, fig.height=10}
-
-ggplot() +
-  geom_brain(atlas = schaefer7_400,
-             position = position_brain(hemi ~ side)) + 
-  scale_fill_brain("schaefer7_400", package = "ggsegSchaefer") +
-  guides(fill = FALSE)
-
-ggplot() +
-  geom_brain(atlas = schaefer17_100,
-             position = position_brain(hemi ~ side)) + 
-  scale_fill_brain("schaefer17_100", package = "ggsegSchaefer") +
-  guides(fill = FALSE)
+```{r, include=FALSE}
+dt <- as.data.frame(data(package="ggsegSchaefer")$results, stringsAsFactors = FALSE)
 ```
+
+### ggseg 2d atlases
+
+```{r, fig.height=20, echo = FALSE}
+library(patchwork)
+gg <- dt %>% 
+  filter(!grepl("_3d$", Item)) %>% 
+  pull(Item) %>% 
+  lapply(function(x) plot(get(x), show.legend = FALSE) + ggtitle(x))
+wrap_plots(gg, ncol = 1) &
+  theme_brain2()
+```
+
+### ggseg 3d atlases
 
 ```{r "noneval", eval=FALSE}
 ggseg3d(atlas = schaefer7_400_3d, surface = "inflated") %>% 
@@ -75,39 +82,24 @@ ggseg3d(atlas = schaefer7_400_3d, surface = "inflated") %>%
 ```
 
 ```{r "orca", include=FALSE}
-p <- ggseg3d(atlas = schaefer7_400_3d, surface = "inflated") %>%
-  pan_camera("right lateral") %>%
-  plotly::add_annotations( text="Screen capture",
-                  legendtitle=TRUE, showarrow=FALSE,
-                  font = list(color = "#000000b4",
-                              family = 'sans serif',
-                              size = 50))
-plotly::orca(p, "man/figures/README-s7-3d-plot.png")
+save3d <- function(data){
+  p <- ggseg3d(atlas = data, surface = "inflated") %>%
+    pan_camera("right lateral") %>%
+    plotly::add_annotations( text=sprintf("%s\nScreen capture", data),
+                    legendtitle=TRUE, showarrow=FALSE,
+                    font = list(color = "#000000b4",
+                                family = 'sans serif',
+                                size = 50))
+  plotly::orca(p, sprintf("man/figures/README-%s-plot.png", data))
+}
+dt %>% 
+  filter(grepl("_3d$", Item)) %>% 
+  pull(Item) %>% 
+  lapply(save3d)
 ```
 
-```{r "incl", echo=FALSE}
-knitr::include_graphics("man/figures/README-s7-3d-plot.png")
-```
-
-
-```{r "noneval1", eval=FALSE}
-ggseg3d(atlas = schaefer17_100_3d, surface = "inflated") %>% 
-  pan_camera("right lateral")
-```
-
-```{r "orca1", include=FALSE}
-p <- ggseg3d(atlas = schaefer17_3d, surface = "inflated") %>%
-  pan_camera("right lateral") %>%
-  plotly::add_annotations( text="Screen capture",
-                  legendtitle=TRUE, showarrow=FALSE,
-                  font = list(color = "#000000b4",
-                              family = 'sans serif',
-                              size = 50))
-plotly::orca(p, "man/figures/README-s17-3d-plot.png")
-```
-
-```{r "incl1", echo=FALSE}
-knitr::include_graphics("man/figures/README-s17-3d-plot.png")
+```{r echo=FALSE, out.width="30%"}
+knitr::include_graphics(list.files("man/figures/", "schaefer", full.names = TRUE))
 ```
 
 Please note that the 'ggsegSchaefer' project is released with a

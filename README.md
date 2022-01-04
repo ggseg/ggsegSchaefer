@@ -42,10 +42,9 @@ remotes::install_github("LCBC-UiO/ggsegSchaefer")
 
 ``` r
 library(ggsegSchaefer)
-#> Loading required package: ggplot2
-#> Loading required package: ggseg
-#> Warning: package 'ggseg' was built under R version 4.1.1
-#> Loading required package: ggseg3d
+library(ggseg)
+library(ggseg3d)
+library(ggplot2)
 library(dplyr)
 #> 
 #> Attaching package: 'dplyr'
@@ -57,43 +56,18 @@ library(dplyr)
 #>     intersect, setdiff, setequal, union
 ```
 
-``` r
-ggplot() +
-  geom_brain(atlas = schaefer7_400,
-             position = position_brain(hemi ~ side)) + 
-  scale_fill_brain("schaefer7_400", package = "ggsegSchaefer") +
-  guides(fill = FALSE)
-#> Warning: `guides(<scale> = FALSE)` is deprecated. Please use `guides(<scale> =
-#> "none")` instead.
-```
+### ggseg 2d atlases
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
 
-``` r
-ggplot() +
-  geom_brain(atlas = schaefer17_100,
-             position = position_brain(hemi ~ side)) + 
-  scale_fill_brain("schaefer17_100", package = "ggsegSchaefer") +
-  guides(fill = FALSE)
-#> Warning: `guides(<scale> = FALSE)` is deprecated. Please use `guides(<scale> =
-#> "none")` instead.
-```
-
-<img src="man/figures/README-unnamed-chunk-4-2.png" width="100%" />
+### ggseg 3d atlases
 
 ``` r
 ggseg3d(atlas = schaefer7_400_3d, surface = "inflated") %>% 
   pan_camera("right lateral")
 ```
 
-<img src="man/figures/README-s7-3d-plot.png" width="100%" />
-
-``` r
-ggseg3d(atlas = schaefer17_100_3d, surface = "inflated") %>% 
-  pan_camera("right lateral")
-```
-
-<img src="man/figures/README-s17-3d-plot.png" width="100%" />
+<img src="man/figures//README-schaefer17_100_3d-plot.png" width="30%" /><img src="man/figures//README-schaefer17_1000_3d-plot.png" width="30%" /><img src="man/figures//README-schaefer17_200_3d-plot.png" width="30%" /><img src="man/figures//README-schaefer17_300_3d-plot.png" width="30%" /><img src="man/figures//README-schaefer17_400_3d-plot.png" width="30%" /><img src="man/figures//README-schaefer17_500_3d-plot.png" width="30%" /><img src="man/figures//README-schaefer17_600_3d-plot.png" width="30%" /><img src="man/figures//README-schaefer17_700_3d-plot.png" width="30%" /><img src="man/figures//README-schaefer17_800_3d-plot.png" width="30%" /><img src="man/figures//README-schaefer17_900_3d-plot.png" width="30%" /><img src="man/figures//README-schaefer7_100_3d-plot.png" width="30%" /><img src="man/figures//README-schaefer7_1000_3d-plot.png" width="30%" /><img src="man/figures//README-schaefer7_200_3d-plot.png" width="30%" /><img src="man/figures//README-schaefer7_300_3d-plot.png" width="30%" /><img src="man/figures//README-schaefer7_400_3d-plot.png" width="30%" /><img src="man/figures//README-schaefer7_500_3d-plot.png" width="30%" /><img src="man/figures//README-schaefer7_600_3d-plot.png" width="30%" /><img src="man/figures//README-schaefer7_700_3d-plot.png" width="30%" /><img src="man/figures//README-schaefer7_800_3d-plot.png" width="30%" /><img src="man/figures//README-schaefer7_900_3d-plot.png" width="30%" />
 
 Please note that the ‘ggsegSchaefer’ project is released with a
 [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to
