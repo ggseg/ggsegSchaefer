@@ -36,7 +36,7 @@ An object of class \code{brain_atlas} of length 4.
 An object of class \code{brain_atlas} of length 4.
 }
 \usage{
-data(schaefer17)
+data(schaefer17_100)
 
 schaefer17_200
 
