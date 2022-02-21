@@ -7,13 +7,12 @@
 
 [![R-CMD-check](https://github.com/ggseg/ggsegSchaefer/workflows/R-CMD-check/badge.svg)](https://github.com/ggseg/ggsegSchaefer/actions)
 [![DOI](https://zenodo.org/badge/250276444.svg)](https://zenodo.org/badge/latestdoi/250276444)
-[![CRAN
-status](https://www.r-pkg.org/badges/version/ggsegSchaefer)](https://CRAN.R-project.org/package=ggsegSchaefer)
+[![r-univserse](https://ggseg.r-universe.dev/badges/ggsegSchaefer)](https://ggseg.github.io/ggsegSchaefer/)
 <!-- badges: end -->
 
-This package contains dataset for plotting the Shaefer cortical atlas
-ggseg and ggseg3d. Now includes sets for the 17 and 7 network atlas, for
-parcellations 100:1000.
+This package contains dataset for plotting the Schaefer cortical atlas
+(version 0.17.1) ggseg and ggseg3d. Now includes sets for the 17 and 7
+network atlas, for parcellations 100:1000.
 
 ## Installation
 

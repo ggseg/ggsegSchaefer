@@ -2,7 +2,7 @@
 ## Polygon data ----
 #' Local-Global 7-Network Parcellation of the Human Cerebral Cortex
 #'
-#' Coordinate data for the Schaefer et al. (2018) cortical atlas,
+#' Coordinate data for the Schaefer et al. (2018) cortical atlas (version 0.17.1),
 #' with 100-1000 regions on the cortical surface of the brain, aligned with
 #' 7 previously described functional networks (Yeo et al., 2011).
 #'
@@ -66,7 +66,7 @@
 
 #' Local-Global 17-Network Parcellation of the Human Cerebral Cortex
 #'
-#' Coordinate data for the Schaefer et al. (2018) cortical atlas,
+#' Coordinate data for the Schaefer et al. (2018) cortical atlas (version 0.17.1),
 #' with 100-1000 regions on the cortical surface of the brain, aligned with
 #' 17 previously described functional networks (Yeo et al., 2011).
 #'
@@ -138,7 +138,7 @@
 #' Local-Global 7-Network Parcellation of the Human Cerebral Cortex
 #'
 #' Mesh data for the 7 resting-state networks of
-#' the Schaefer et al. (2018) networks.
+#' the Schaefer et al. (2018) networks (version 0.17.1).
 #'
 #' @docType data
 #' @name schaefer7_3d
@@ -199,7 +199,7 @@
 #' Local-Global 17-Network Parcellation of the Human Cerebral Cortex
 #'
 #' Mesh data for the 17 resting-state networks of
-#' the Schaefer et al. (2018) networks.
+#' the Schaefer et al. (2018) networks (version 0.17.1).
 #'
 #' @docType data
 #' @name schaefer17_3d
