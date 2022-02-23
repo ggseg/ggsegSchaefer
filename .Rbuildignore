@@ -14,3 +14,4 @@
 ^pkgdown$
 ^python$
 ^\.github$
+*zip

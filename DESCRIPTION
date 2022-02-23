@@ -26,7 +26,6 @@ Imports:
     ggseg,
     ggseg3d
 Suggests:
-    ggsegExtra,
     tidyverse,
     knitr,
     usethis,
@@ -36,7 +35,9 @@ Suggests:
     devtools,
     renv,
     freesurfer,
-    roxygen2,
+    roxygen2
+Enhances:
+    ggsegExtra
 VignetteBuilder: knitr
 Remotes: 
     ggseg/ggsegExtra
