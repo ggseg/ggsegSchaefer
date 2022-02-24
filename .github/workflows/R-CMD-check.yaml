@@ -37,8 +37,8 @@ jobs:
           use-public-rspm: true
 
       - uses: r-lib/actions/setup-r-dependencies@v2
-        dependencies: 'c("Depends", "Imports", "LinkingTo", "Suggests")'
         with:
+          dependencies: 'c("Depends", "Imports", "LinkingTo", "Suggests")'
           extra-packages: rcmdcheck
 
       - uses: r-lib/actions/check-r-package@v2
