@@ -36,6 +36,10 @@ Suggests:
     renv,
     freesurfer,
     roxygen2
+Enhances:
+    ggsegExtra
 VignetteBuilder: knitr
+Remotes: 
+    ggseg/ggsegExtra
 URL: https://github.com/LCBC-UiO/ggsegSchaefer
 BugReports: https://github.com/LCBC-UiO/ggsegSchaefer/issues
