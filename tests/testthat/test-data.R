@@ -25,21 +25,11 @@ for (nm in c(atlas_names_7, atlas_names_17)) {
 describe("schaefer7_400 atlas rendering", {
   it("renders with ggseg", {
     skip_if_not_installed("ggseg")
-    skip_if_not_installed("ggplot2")
     skip_if_not_installed("vdiffr")
-    p <- ggplot2::ggplot() +
-      ggseg::geom_brain(
-        atlas = schaefer7_400(),
-        mapping = ggplot2::aes(fill = label),
-        position = ggseg::position_brain(hemi ~ view),
-        show.legend = FALSE
-      ) +
-      ggplot2::scale_fill_manual(
-        values = schaefer7_400()$palette,
-        na.value = "grey"
-      ) +
-      ggplot2::theme_void()
-    vdiffr::expect_doppelganger("schaefer7_400-2d", p)
+    vdiffr::expect_doppelganger(
+      "schaefer7_400-2d",
+      ggseg::brain_test_plot(schaefer7_400())
+    )
   })
 
   it("renders with ggseg3d", {
