@@ -11,3 +11,4 @@ docs
 ^.*\.zip$
 ^README\.qmd$
 ^codemeta\.json$
+^\.lintr$
